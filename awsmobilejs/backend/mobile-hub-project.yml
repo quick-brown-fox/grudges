@@ -1,0 +1,82 @@
+--- !com.amazonaws.mobilehub.v0.Project 
+features:
+  cloudlogic: !com.amazonaws.mobilehub.v0.CloudLogic 
+    components:
+      grudgesCRUD: !com.amazonaws.mobilehub.v0.API 
+        attributes:
+          name: grudgesCRUD
+          requires-signin: true
+          sdk-generation-stage-name: Development
+        paths:
+          /grudges: !com.amazonaws.mobilehub.v0.Function 
+            codeFilename: uploads/grudges-20181018193809.zip
+            description: 'Handler for calls to resource path : /grudges/{proxy+}'
+            enableCORS: true
+            environment: {}
+            handler: lambda.handler
+            hashcode: BgqrUPgIYy14AtOtwh6AoLhzbwTxhOtA+KxkpgJbxP8=
+            memorySize: '128'
+            modified: '2018-10-18T12:39:34.142+0000'
+            name: grudges
+            runtime: nodejs6.10
+            timeout: '3'
+            version: L92hZz33MwrXz4caNrabm7B5DLZedWWw
+          '/grudges/{proxy+}': !com.amazonaws.mobilehub.v0.Function 
+            codeFilename: uploads/grudges-20181018193809.zip
+            description: 'Handler for calls to resource path : /grudges/{proxy+}'
+            enableCORS: true
+            environment: {}
+            handler: lambda.handler
+            hashcode: BgqrUPgIYy14AtOtwh6AoLhzbwTxhOtA+KxkpgJbxP8=
+            memorySize: '128'
+            modified: '2018-10-18T12:39:34.142+0000'
+            name: grudges
+            runtime: nodejs6.10
+            timeout: '3'
+            version: 7MR4ywxpns2T93XiR1.R6ptvKN1m0GcU
+  content-delivery: !com.amazonaws.mobilehub.v0.ContentDelivery 
+    attributes:
+      enabled: true
+      visibility: public-global
+    components:
+      release: !com.amazonaws.mobilehub.v0.Bucket {}
+  database: !com.amazonaws.mobilehub.v0.Database 
+    components:
+      database-nosql: !com.amazonaws.mobilehub.v0.NoSQLDatabase 
+        tables:
+          - !com.amazonaws.mobilehub.v0.NoSQLTable 
+            attributes:
+              avenged: BOOL
+              deed: S
+              id: S
+              person: S
+              userId: S
+            hashKeyName: userId
+            hashKeyType: S
+            rangeKeyName: id
+            rangeKeyType: S
+            tableName: ___DYNAMIC_PREFIX___-grudges
+            tablePrivacy: private
+  mobile-analytics: !com.amazonaws.mobilehub.v0.Pinpoint 
+    components:
+      analytics: !com.amazonaws.mobilehub.v0.PinpointAnalytics {}
+  sign-in: !com.amazonaws.mobilehub.v0.SignIn 
+    attributes:
+      enabled: true
+      optional-sign-in: true
+    components:
+      sign-in-user-pools: !com.amazonaws.mobilehub.v0.UserPoolsIdentityProvider 
+        attributes:
+          alias-attributes:
+            - email
+          mfa-configuration: OFF
+          name: userpool
+          password-policy: !com.amazonaws.mobilehub.ConvertibleMap 
+            min-length: '8'
+            require-lower-case: true
+            require-numbers: true
+            require-symbols: false
+            require-upper-case: true
+          standard-attributes: '[]'
+name: grudges-2018-10-17-19-27-48
+region: ap-northeast-2
