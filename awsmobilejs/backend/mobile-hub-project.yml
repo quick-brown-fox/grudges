@@ -9,31 +9,31 @@ features:
           sdk-generation-stage-name: Development
         paths:
           /grudges: !com.amazonaws.mobilehub.v0.Function 
-            codeFilename: uploads/grudges-20181018193809.zip
+            codeFilename: uploads/grudges-20181021134026.zip
             description: 'Handler for calls to resource path : /grudges/{proxy+}'
             enableCORS: true
             environment: {}
             handler: lambda.handler
-            hashcode: BgqrUPgIYy14AtOtwh6AoLhzbwTxhOtA+KxkpgJbxP8=
+            hashcode: rOSY6Pl1+/F+xt6p9b87IXMS9bJFrT0KhMvpKeCEFPA=
             memorySize: '128'
-            modified: '2018-10-18T12:39:34.142+0000'
+            modified: '2018-10-21T06:41:19.945+0000'
             name: grudges
             runtime: nodejs6.10
             timeout: '3'
-            version: L92hZz33MwrXz4caNrabm7B5DLZedWWw
+            version: p0r9f07WFSXzAyeufw1WJO5C.x9EqWJE
           '/grudges/{proxy+}': !com.amazonaws.mobilehub.v0.Function 
-            codeFilename: uploads/grudges-20181018193809.zip
+            codeFilename: uploads/grudges-20181021134026.zip
             description: 'Handler for calls to resource path : /grudges/{proxy+}'
             enableCORS: true
             environment: {}
             handler: lambda.handler
-            hashcode: BgqrUPgIYy14AtOtwh6AoLhzbwTxhOtA+KxkpgJbxP8=
+            hashcode: rOSY6Pl1+/F+xt6p9b87IXMS9bJFrT0KhMvpKeCEFPA=
             memorySize: '128'
-            modified: '2018-10-18T12:39:34.142+0000'
+            modified: '2018-10-21T06:41:19.945+0000'
             name: grudges
             runtime: nodejs6.10
             timeout: '3'
-            version: 7MR4ywxpns2T93XiR1.R6ptvKN1m0GcU
+            version: XODozDCKhyI2C9wv221PgyEaN57UFjpS
   content-delivery: !com.amazonaws.mobilehub.v0.ContentDelivery 
     attributes:
       enabled: true
